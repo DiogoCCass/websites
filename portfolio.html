@@ -1,17 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<meta name="theme-color" content="#111">
-<meta name="apple-mobile-web-app-status-bar-style" content="#111">
-<meta name="msapplication-navbutton-color" content="#111">
-
+<html lang="pt-br" onload="msg()">
 <head>
+    <meta name="theme-color" content="#111">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#111">
+    <meta name="msapplication-navbutton-color" content="#111">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="random.css">
     <title>Portfólio de DiogoCass</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    function msg(){
+swal({
+  title: "Seja Muito Bem-Vindo",
+  text: "Fico agradecido pela vossa visita",
+  icon: "success",
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("Você esta ouvindo a musica tematica do filme INTERISTELAR, o melhor filme de ficção espacial", {
+      icon: "info",
+    });
+                var h=document.getElementById("audioplay")
+            h.play();
+  }
+});
+
+}
+   
+   $(function(){
+
+  $('#menu').click(function(){
+    //$(this).toggleClass('fa fa-times');
+    $('header').toggleClass('toggle');
+  });
+
+  $(window).on('scroll load',function(){
+
+    //$('#menu').removeClass('fas fa-times');
+    $('header').removeClass('toggle');
+
+    if($(window).scrollTop() > 0){
+      $('.top').show();
+    }else{
+      $('.top').hide();
+    }
+
+  });
+
+  // smooth scrolling 
+
+  $('a[href*="#"]').on('click',function(e){
+
+    e.preventDefault();
+
+    $('html, body').animate({
+
+      scrollTop : $($(this).attr('href')).offset().top,
+
+    },
+      500, 
+      'linear'
+    );
+
+  });
+
+});
+   </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
@@ -52,9 +109,16 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background:#111;
+    background-image: url(https://www.dropbox.com/s/vwauyuwkhr4bsq9/271401509_637839150895824_139673327600420268_n.gif?dl=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow-x: hidden;
     padding-left: 35rem;
+}
+
+video {
+    border-radius: 8px;
 }
 
 section{
@@ -464,7 +528,8 @@ header .navbar ul li a:hover{
  
     </style>
 </head>
-<body>
+<audio id="audioplay"><source src="https://www.dropbox.com/s/fohvlnpv49daoi6/videoplayback.m4r?dl=1" type="audio/mpeg">not sippoei</audio>
+<body onload="msg()">
     <header>
         <div class="user">
            <h1 class="name">Diogo Cass</h1>
@@ -505,22 +570,27 @@ header .navbar ul li a:hover{
 
             <div class="box">
                 <span>ASTRONOMIA</span>
-                <h3>"sou fascinado pelo universo e amo demais esse tema"</h3>
+                <h3>"sou fascinado pelo universo e amo demais esse tema"</h3><br>
+                <video width="60%" controls poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/vb9xfkb9lawi0v1/292747347_607008024330560_2442177331211158495_n.mp4?dl=1" type="video/mp4">
+                
             </div>
 
             <div class="box">
                 <span>PROGRAMAÇÃO</span>
-                <h3>"sou viciado em criar codigos, design e sites"</h3>
+                <h3>"sou viciado em criar codigos, design e sites"</h3><br>
+                 <video width="70%" controls poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/szyp0qcbdg775ez/274479542_2732915353521738_3554750004848247180_n.mp4?dl=1" type="video/mp4">
             </div>
 
             <div class="box">
                 <span>BÍBLIA</span>
-                <h3>"Sou eternamente grato pela orientação de JEOVÁ"</h3>
+                <h3>"Sou eternamente grato pela orientação de JEOVÁ"</h3><br>
+                <video width="70%" controls poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/d9lsgysmqtpdy25/288930572_983153882304246_2519354163877275943_n.mp4?dl=1" type="video/mp4">
             </div>
 
             <div class="box">
                 <span>DESENHOS</span>
-                <h3>"Cara! Eu não sei como, mas esse dom é impressionante"</h3>
+                <h3>"Cara! Eu não sei como, mas esse dom é impressionante"</h3><br>
+                <video width="70%" controls poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/aovemgs60io5c7l/vid.mp4?dl=1" type="video/mp4">
             </div>
         </div>
     </div>
@@ -553,7 +623,7 @@ header .navbar ul li a:hover{
             <span>A verdade</span>
             <span>A vida</span>
             <h3>ESTUDO DA BÍBLIA</h3>
-            <p>Qual é o objetivo da vida? Filósofos, teólogos e cientistas por milênios têm procurado a resposta a esta pergunta. Escreveram-se incontáveis livros por aqueles que procuravam obter a resposta a ela. Seus esforços têm sido em vão, e muitos chegaram à conclusão de que não há resposta a esta pergunta. Todavia, há uma resposta. Embora seja profunda, não é complicada. Ela é explicada na Bíblia. A chave para se levar uma vida feliz e significativa é: Temos de ter um relacionamento correto com Jeová, nosso Criador e Pai celestial.</p>
+            <p>Qual é o objetivo da vida? Filósofos, teólogos e cientistas por milênios têm procurado a resposta a esta pergunta. Escreveram-se incontáveis livros por aqueles que procuravam obter a resposta a ela. Seus esforços têm sido em vão, e muitos chegaram à conclusão de que não há resposta a esta pergunta. Todavia, há uma resposta. Embora seja profunda, não é complicada. Ela é explicada na Bíblia. A chave para se levar uma vida feliz e significativa é: Temos de ter um relacionamento correto com Jeová, nosso Criador e Pai celestial.</p>
         </div>
 
         <div class="box">
@@ -562,17 +632,17 @@ header .navbar ul li a:hover{
             <span>3D</span>
             <span>perspectivas</span>
             <h3>DESENHAR É UMA TERAPIA</h3>
-            <p>É inegável que há indivíduos cujas habilidades se mostram presentes desde cedo. Uma tendência, uma facilidade acompanhada de paixão por algo. São esses os “gênios”, com capacidades que se destacam da maioria. Mas essa ideia de “gênio” já carrega alguns preconceitos que não correspondem à realidade.  Mas o essas pessoas têm é a paixão e a curiosidade por determinado assunto, são tomados de um desejo incansável de aprender e mergulhar em tal atividade. <!--A jornada destes “gênios” não é em busca de fama ou dinheiro. São acompanhadas de um prazer único por estarem fazendo algo que amam, que refletem sua personalidade e individualidade. Então o prêmio não está no final, mas no percurso. O simples ato de fazer traz a satisfação que os mantém firmes em seus propósitos. Assim, percebe-se que a persistência se faz mais importante que o talento, pois uma mente interessada e motivada se mostra incansável em sua busca. Seu trabalho e sua vida são partes de si, caminham juntos. Essa vocação norteia suas ações e os levam a atingir níveis inimagináveis, ainda que para isso, leve anos ou décadas.--></p>
+            <p>É inegável que há indivíduos cujas habilidades se mostram presentes desde cedo. Uma tendência, uma facilidade acompanhada de paixão por algo. São esses os “gênios”, com capacidades que se destacam da maioria. Mas essa ideia de “gênio” já carrega alguns preconceitos que não correspondem à realidade.  Mas o essas pessoas têm é a paixão e a curiosidade por determinado assunto, são tomados de um desejo incansável de aprender e mergulhar em tal atividade. <!--A jornada destes “gênios” não é em busca de fama ou dinheiro. São acompanhadas de um prazer único por estarem fazendo algo que amam, que refletem sua personalidade e individualidade. Então o prêmio não está no final, mas no percurso. O simples ato de fazer traz a satisfação que os mantém firmes em seus propósitos. Assim, percebe-se que a persistência se faz mais importante que o talento, pois uma mente interessada e motivada se mostra incansável em sua busca. Seu trabalho e sua vida são partes de si, caminham juntos. Essa vocação norteia suas ações e os levam a atingir níveis inimagináveis, ainda que para isso, leve anos ou décadas.--></p>
         </div>
 
-        <div class="box">
+        <!--div class="box">
             <i class="fa fa-graduation-cap"></i> 
             <span>Noites</span>
             <span>Astros</span>
             <span>Lua</span>
             <h3>Nyctophile, Astrophile & Selenophile</h3>
             <p>A noite, os astros e a lua para mim são cativantes, e o termo filia vem do grego que significa "atração ou amor", seja ele bom, agradavel ou simples. "FILIA NÃO SIGNIFICA ALGO SEXUAL" e nem mesmo "parafilias", que são atrações sexuais fora do comum ou disturbios mentais em relacao a desejo sexual. Portanto, nictofilia, astrofilia e selenofia NÃO SÃO disturbios mentais e muito menos parafilias.</p>
-        </div>
+        </div-->
 
         <div class="box">
             <i class="fa fa-graduation-cap"></i> 
@@ -630,48 +700,6 @@ header .navbar ul li a:hover{
         </form>
     </div>
 </section>
-    <script>
-   
-   $(function(){
-
-  $('#menu').click(function(){
-    //$(this).toggleClass('fa fa-times');
-    $('header').toggleClass('toggle');
-  });
-
-  $(window).on('scroll load',function(){
-
-    //$('#menu').removeClass('fas fa-times');
-    $('header').removeClass('toggle');
-
-    if($(window).scrollTop() > 0){
-      $('.top').show();
-    }else{
-      $('.top').hide();
-    }
-
-  });
-
-  // smooth scrolling 
-
-  $('a[href*="#"]').on('click',function(e){
-
-    e.preventDefault();
-
-    $('html, body').animate({
-
-      scrollTop : $($(this).attr('href')).offset().top,
-
-    },
-      500, 
-      'linear'
-    );
-
-  });
-
-});
-   </script>
-   
-
 </body>
 </html>
+
