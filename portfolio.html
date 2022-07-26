@@ -12,6 +12,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
+    
+        
+    
+    
     function msg(){
 swal({
   title: "Seja Muito Bem-Vindo",
@@ -20,17 +24,36 @@ swal({
 })
 .then((willDelete) => {
   if (willDelete) {
+  
+  /*
     swal("Você esta ouvindo a musica tematica do filme INTERISTELAR, o melhor filme de ficção espacial", {
       icon: "info",
     });
+    */
                 var h=document.getElementById("audioplay")
             h.play();
+            
+            const dg = (element) => document.getElementById(element)
+    
+    dg("txt").innerHTML = "<b>PRONTINHO ❤️ OBRIGADÃO</b>"
+    setTimeout(loader, 3000)
+function loader(){
+    dg("code").style.opacity = "1";
+    dg("cool-loader").style.opacity = "0";
+    setTimeout(()=>{
+    dg("cool-loader").style.display = "none";
+    //teste alert("debug")
+    },1000);
+}
+            
+            
   }
 });
 
 }
    
    $(function(){
+   
 
   $('#menu').click(function(){
     //$(this).toggleClass('fa fa-times');
@@ -68,6 +91,8 @@ swal({
   });
 
 });
+
+
    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
@@ -448,6 +473,65 @@ header .navbar ul li a:hover{
     display: none;
 }
 
+#code{
+    transition: all 7s;
+    opacity:0;
+}
+
+#cool-loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    overflow: hidden;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.8);
+    transition: 5s;
+
+  }  .react-spinner-loader-svg {
+        position: relative;
+        margin: 0 auto;
+        width: 128px;
+        margin-top: 41%;
+        text-align: center;
+    }
+
+    .react-spinner-loader-svg svg {
+    -webkit-transform-origin: 50% 65%;
+                transform-origin: 50% 65%;
+    }
+
+    .react-spinner-loader-svg svg polygon {
+        stroke-dasharray: 17;
+        -webkit-animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+                    animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+    }
+
+    @-webkit-keyframes dash {
+        to {
+            stroke-dashoffset: 136;
+        }
+    }
+
+    @keyframes dash {
+        to {
+            stroke-dashoffset: 136;
+        }
+    }
+    @-webkit-keyframes rotate {
+        100% {
+            -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+        }
+    }
+    @keyframes rotate {
+        100% {
+            -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+        }
+    }
+
+
 /* media queries  */
 
 @media (max-width:2200px){
@@ -529,7 +613,15 @@ header .navbar ul li a:hover{
     </style>
 </head>
 <audio id="audioplay"><source src="https://www.dropbox.com/s/fohvlnpv49daoi6/videoplayback.m4r?dl=1" type="audio/mpeg">not sippoei</audio>
+<div id="cool-loader">
+  <div class="react-spinner-loader-svg">
+    <svg id="triangle" width="128" height="128" viewBox="-3 -4 39 39">
+          <polygon fill="transparent" stroke="cyan" strokeWidth="1" points="16,0 32,32 0,32" />
+    </svg><p id="txt">💝 AGUARDE UM POUQUINHO 💓 OS ARQUIVOS ESTÃO CARREGANDO...</p>
+  </div>
+</div>
 <body onload="msg()">
+<div id="code">
     <header>
         <div class="user">
            <h1 class="name">Diogo Cass</h1>
@@ -571,26 +663,26 @@ header .navbar ul li a:hover{
             <div class="box">
                 <span>ASTRONOMIA</span>
                 <h3>"sou fascinado pelo universo e amo demais esse tema"</h3><br>
-                <video width="60%" controls poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/vb9xfkb9lawi0v1/292747347_607008024330560_2442177331211158495_n.mp4?dl=1" type="video/mp4">
+                <video controls onloadstart="this.volume=0.06" width="60%" poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/vb9xfkb9lawi0v1/292747347_607008024330560_2442177331211158495_n.mp4?dl=1" type="video/mp4">
                 
             </div>
 
             <div class="box">
                 <span>PROGRAMAÇÃO</span>
                 <h3>"sou viciado em criar codigos, design e sites"</h3><br>
-                 <video width="70%" controls poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/szyp0qcbdg775ez/274479542_2732915353521738_3554750004848247180_n.mp4?dl=1" type="video/mp4">
+                 <video controls onloadstart="this.volume=0.06" width="70%" controls poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/szyp0qcbdg775ez/274479542_2732915353521738_3554750004848247180_n.mp4?dl=1" type="video/mp4">
             </div>
 
             <div class="box">
                 <span>BÍBLIA</span>
                 <h3>"Sou eternamente grato pela orientação de JEOVÁ"</h3><br>
-                <video width="70%" controls poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/d9lsgysmqtpdy25/288930572_983153882304246_2519354163877275943_n.mp4?dl=1" type="video/mp4">
+                <video width="70%" controls onloadstart="this.volume=0.06" poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/d9lsgysmqtpdy25/288930572_983153882304246_2519354163877275943_n.mp4?dl=1" type="video/mp4">
             </div>
 
             <div class="box">
                 <span>DESENHOS</span>
                 <h3>"Cara! Eu não sei como, mas esse dom é impressionante"</h3><br>
-                <video width="70%" controls poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/aovemgs60io5c7l/vid.mp4?dl=1" type="video/mp4">
+                <video controls onloadstart="this.volume=0.08" width="70%" poster="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"> <source src="https://www.dropbox.com/s/aovemgs60io5c7l/vid.mp4?dl=1" type="video/mp4">
             </div>
         </div>
     </div>
@@ -700,6 +792,6 @@ header .navbar ul li a:hover{
         </form>
     </div>
 </section>
+</div>
 </body>
 </html>
-
