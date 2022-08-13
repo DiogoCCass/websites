@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!-- Boa noiteee :)
+============================================
+          NOME DO PROJETO : Apresentação de website.
+               TEMPO TRABALHADO : Quase um mês, 29 dias.
+            EDITOR DE TEXTO : SoloLearn Mobile
+       PESQUISAS EXTERNAS : Várias, sobre design e UI.
+               PAÍS : BRASIL.
+       DATA DE CRIAÇÃO E FINALIZAÇÃO : 14/07-12/08 de 2022.
+============================================
+Versículo Bíblico: Salmo 19:1 - "Os céus declaram a glória de Deus, eles proclamam o trabalho das suas mão"
+=========================================-->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1" rel="shortcut icon" type="image/x-icon">
+    <meta name="google" content="translate">
+    <meta property=og:image content="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1"/>
+    <link rel="shortcut icon" href="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://www.dropbox.com/s/gq6lsfw2h8lm8ib/FB_IMG_16339594781166842.jpg?dl=1">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name="theme-color" content="#000010">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diogo Cass - Website </title>
+    <!-- CDN de fontes-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <style>
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent ;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    width:100%;
+    height:100vh; 
+    background:url("https://i.ibb.co/NZvwPg9/FB-IMG-1651971606501.jpg") no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
+}
+p {
+    color: #575a7b;
+    font-size: 1em;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+}
+.pp {
+    background-color: #ffffff;
+    padding: 25px;
+    text-align: justify;
+    font-size: 22px;
+    line-height: 1.7em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    border-radius: 8px;
+}
+.pp::first-letter {
+    color: #2274fb;
+    font-family: "Alex Brush", cursive;
+    font-size: 135px;
+    float: left;
+    padding-top: 0.3em;
+    padding-right: 0.22em;
+}
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.6em;
+    color: #ffffff; #1f003b;
+}
+h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #1f194c;
+    margin: 1em 0;
+}
+section {
+    width: 100%;
+}
+.cartao {
+    background-color: #ffffff;
+    padding: 3.5em 1em;
+    border-radius: 0.6em;
+    -webkit-box-shadow: 0 0 2.2em rgba(25, 0, 58, 0.15);
+    box-shadow: 0 0 2.2em rgba(25, 0, 58, 0.15);
+    color: #1f003b;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.cartao .foto-perfil {
+    width: 8em;
+    height: 8em;
+    background-color: #a993ff;
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.cartao img {
+    width: 100%;
+    border-radius: 50%;
+}
+.cartao h3 {
+    font-weight: 500;
+}
+.cartao p {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0.5em 0 2em 0;
+}
+.icones {
+    width: 50%;
+    min-width: 180px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.cartao a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4em;
+}
+.cartao:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+}
+.cartao:hover .foto-perfil {
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+a#yt-link {
+    background-color: #8567f7;
+    display: block;
+    width: 95%;
+    font-size: 1.2em;
+    position: relative;
+    margin: 0 auto 2em auto;
+    padding: 1em 0;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.3em;
+    max-width: 25em;
+}
+ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+li:not(:first-child) {
+    margin-top: 0.8em;
+}
+ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+ul li a:hover {
+    color: #2a8ded;
+}
+.about p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+}
+input, button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+button {
+    background-color: #2a8ded;
+    color: #ffffff;
+      }
+div.redes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    font-size: 2.4em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-top: 0.5em;
+}
+.redes i:hover {
+    color: #2a8ded;
+}
+.linhaa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    text-align: center;
+}
+.linha {
+    padding: 2em 0.5em;
+}
+.linha.primaria {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column: 2fr 1fr 2fr;
+    grid-template-column: 2fr 1fr 2fr;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+.linha.segundaria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    text-align: center;
+}
+.linha.segundaria i {
+    font-size: 1.8em;
+    color: #2a8ded;
+}
+.linha.segundaria div {
+    padding: 1em 0;
+    width: 100%;
+}
+.linha.segundaria div:hover {
+    background-color: #25262e;
+}
+.coluna {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+}
+.colunaa {
+    width: 100%;
+    padding: 0.5em 0;
+}
+.autoria {
+    padding: 1em 1em;
+    background-color: #25262e;
+}
+.autoria a {
+    position: relative;
+    display: block;
+    width: 90%;
+    background-color: #2a8ded;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    padding: 1em 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.autoria p {
+    font-size: 0.9em;
+    text-align: center;
+}
+footer {
+    background-color: #121315;
+    color: #ffffff;
+    font-size: 16px;
+}
+footer * {
+    font-family: "Poppins", sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+@media screen and (min-width: 768px) {
+    section {
+        padding: 1em 7em;
+    }
+    a{
+        width: 50vw;
+    }
+}
+@media screen and (max-width: 850px) {
+    footer {
+        font-size: 14px;
+    }
+    .linha {
+        padding: 2em 0em;
+    }
+    .linha.primaria {
+        -ms-grid-column: 1fr;
+        grid-template-column: 1fr;
+    }
+    .linha.segundaria {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 992px) {
+    section {
+        padding: 1em;
+    }
+    .cartao {
+        padding: 5em 1em;
+    }
+    .coluna {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        padding: 0 1em;
+    }
+}      
+    </style>
+  </head>
+  <body>
+  <section>
+      <div class="linhaa">
+        <h1>🔰 Portfolio 🔰</h1>
+        <!-- Coluna1 -->
+        <div class="colunaa">
+          <div class="cartao">
+            <div class="foto-perfil">
+              <img
+                src="https://i.ibb.co/pQcDJvY/2020-05-06-23-10-50.png"
+              />
+            </div>
+            <h3>DIOGO CASS</h3>
+            <p>PROGRAMADOR WEB</p>
+            <div class="icones">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <p class="pp">
+        <img src="https://78.media.tumblr.com/99d59cb43b3b00cf45025fe11e45a9ae/tumblr_pn1jiu2QPE1xxe8aoo1_1280.gif" alt="" height="100" width="100%"> <br>
+     O Universo é um paradoxo de incertezas! Tudo o que conhecemos nele, é mera especulação! É como se olharmos no buraco da fechadura... e imaginarmos a sua grandiosidade em um jogo de pensamentos e idéias! 
+<br><br>
+"Há mais mistérios entre o céu e a Terra do que sonha  a nossa vã filosofia" - Shakespeare
+</p>
+      </div>
+    </section>
+      <div class="linhaa">
+    <a href="https://www.diogo-cass.tk/amorastronomico" target="_blank" id="yt-link">Ver OUTRO Site...</a>
+    </div>
+     <footer>
+      <div class="linha primaria">
+        <div class="coluna sobremim">
+          <h3 style="color: #8567f7" class="h3">Developer Diogo C.Cass</h3>
+          <p>
+            Criadir de websites, designs e layout templates. Preparado para lhe mostrar um trabalho incrivel dos meus projetos, desenvolvidos com muito capricho e dedicação. Caso estiver interesado nos projetos, solicite por meios dos meus contatos disponievis abaixo...
+          </p>
+        </div>
+        <!--div class="coluna link">
+          <h3>Ou visite meus outros websites</h3>
+          <ul>
+            <li>
+              <a href="#faq">link 1</a>
+            </li>
+            <li>
+              <a href="#cookies-policy">link 2</a>
+            </li>
+            <li>
+              <a href="#terms-of-service">link 3</a>
+            </li>
+            <li>
+              <a href="#support">link 4</a>
+            </li>
+            <li>
+              <a href="#careers">link 5</a>
+            </li>
+          </ul>
+        </div-->
+        <div class="coluna assinar">
+          <h3>Insira seu endereço de email</h3>
+          <div>
+            <input type="email" placeholder="digite seu email aqui para saber mais..." />
+            <button>Saber Mais</button>
+          </div>
+          <div class="redes">
+            <i class="fa-brands fa-facebook-square"></i>
+            <i class="fa-brands fa-instagram-square"></i>
+            <i class="fa-brands fa-twitter-square"></i>
+          </div>
+        </div>
+      </div>
+      <div class="linha segundaria">
+        <div>
+          <p><i class="fa-solid fa-phone"></i></p>
+          <p>+55 51996748252</p>
+        </div>
+        <div>
+          <p><i class="fas fa-envelope"></i></p>
+          <p>developerdiogo@gmail.com</p>
+        </div>
+        <div>
+          <p><i class="fas fa-map-marker-alt"></i></p>
+          <p>Arroio Do Meio - RS</p>
+        </div>
+      </div>
+      <div class="linha autoria">
+        <a href="https://www.google.com" target="_blank"
+          >Whatsapp</a
+        ><br>
+        <p>Website Criado Com 🖤 Por @Diogo CoutCass</p>
+      </div>
+    </footer>
+  </body>
+</html>
